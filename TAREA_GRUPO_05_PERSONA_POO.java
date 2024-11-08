@@ -78,6 +78,33 @@ System.out.println("Doctor: " + getNombre() + ", Edad: " + getEdad() +
 }
 }
 
+// Subclase Deportista Bryan Vasquez
+class Deportista extends Persona {
+private String deporte;
+
+public Deportista(String nombre, int edad, double sueldo, char sexo, String deporte) {
+super(nombre, edad, sueldo, sexo);
+this.deporte = deporte;
+}
+
+public String getDeporte() {
+return deporte;
+}
+
+public void setDeporte(String deporte) {
+this.deporte = deporte;
+}
+
+// Implementacion del metodo abstracto
+@Override
+public void mostrarInfo() {
+System.out.println("Deportista: " + getNombre() + ", Edad: " + getEdad() +
+", Sueldo: " + getSueldo() + ", Sexo: " + getSexo() +
+", Deporte: " + deporte);
+}
+}
+
+
 // Clase principal para probar el codigo
 public class TAREA_GRUPO_05_PERSONA_POO {
 public static void main(String[] args) {
