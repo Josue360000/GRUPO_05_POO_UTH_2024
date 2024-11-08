@@ -52,6 +52,32 @@ this.sexo = sexo;
 public abstract void mostrarInfo();
 }
 
+// Subclase Doctor
+class Doctor extends Persona {
+private String especialidad;
+
+public Doctor(String nombre, int edad, double sueldo, char sexo, String especialidad) {
+super(nombre, edad, sueldo, sexo);
+this.especialidad = especialidad;
+}
+
+public String getEspecialidad() {
+return especialidad;
+}
+
+public void setEspecialidad(String especialidad) {
+this.especialidad = especialidad;
+}
+
+// Implementacion del metodo abstracto
+@Override
+public void mostrarInfo() {
+System.out.println("Doctor: " + getNombre() + ", Edad: " + getEdad() +
+", Sueldo: " + getSueldo() + ", Sexo: " + getSexo() +
+", Especialidad: " + especialidad);
+}
+}
+
 // Clase principal para probar el codigo
 public class TAREA_GRUPO_05_PERSONA_POO {
 public static void main(String[] args) {
